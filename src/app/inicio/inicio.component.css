@@ -1,0 +1,112 @@
+/* Estilo general */
+.intro, .about-me {
+  text-align: center;
+}
+
+/* Animación para el título "Bienvenido!" */
+.intro h1 {
+  font-size: 36px;
+  color: #333;
+  opacity: 0; /* Inicialmente oculto */
+  transform: translateY(-50px); /* Empujamos el texto hacia arriba */
+  animation: slideIn 1s ease-out forwards; /* Desliza hacia abajo */
+}
+
+/* Animación para que el texto se deslice desde arriba */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Empieza por fuera de la pantalla */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición final */
+  }
+}
+
+/* Animación para el párrafo que aparece después */
+.intro p {
+  font-size: 18px;
+  color: white;
+  opacity: 0; /* Inicialmente oculto */
+  animation: fadeIn 1s ease-out 1s forwards; /* Aparece después del título */
+}
+
+/* Animación de desvanecimiento para el párrafo */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilo para la sección "Sobre mí" */
+.about-me {
+  margin-top: 50px;
+}
+
+.about-me h2 {
+  font-size: 28px;
+  color: #444;
+}
+
+.about-me p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Estilo para el card que envuelve el contenido */
+.card-inicio {
+  background-color: rgba(68, 68, 68, 0.1);  /* Fondo blanco semi-transparente */
+  border-radius: 10px;  /* Bordes redondeados */
+  padding: 20px;  /* Espaciado interno */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+  backdrop-filter: blur(5px);  /* Desenfoque del fondo */
+  transition: background-color 0.3s ease;  /* Transición suave de fondo */
+  margin-top: 10px;
+  width: 80%;  /* Ancho del card al 80% del contenedor padre */
+  max-width: 800px;  /* Ancho máximo del card para pantallas grandes */
+  margin-left: auto;  /* Centrado horizontal */
+  margin-right: auto;  /* Centrado horizontal */
+}
+
+.card-inicio h1, .card-inicio h2 {
+  color: #7a7979;  /* Color de los títulos */
+}
+
+.card-inicio p {
+  color: #8f8f8f;  /* Color del texto */
+}
+
+/* Para el modo oscuro */
+.card-inicio-dark {
+  background-color: rgba(0, 0, 0, 0.7);  /* Fondo oscuro semi-transparente */
+  color: #fff;  /* Texto en blanco */
+}
+
+.card-inicio-dark h1, .card-inicio-dark h2 {
+  color: #fff;  /* Títulos en blanco */
+}
+
+.card-inicio-dark p {
+  color: #ddd;  /* Texto más claro en modo oscuro */
+}
+
+/* Para el modo oscuro */
+body.dark-mode .card-inicio {
+  background-color: rgba(0, 0, 0, 0.7);  /* Fondo oscuro semi-transparente */
+  color: #fff;  /* Texto en blanco */
+}
+
+body.dark-mode .card-inicio h1, 
+body.dark-mode .card-inicio h2 {
+  color: #fff;  /* Títulos en blanco */
+}
+
+body.dark-mode .card-inicio p {
+  color: #ddd;  /* Texto más claro en modo oscuro */
+}
+
+/* Estilo para el footer */

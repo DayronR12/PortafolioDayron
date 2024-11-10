@@ -1,0 +1,106 @@
+::ng-deep .p-tabmenu-item {
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 50px;
+}
+
+::ng-deep .p-tabmenu-item:hover {
+    background-color: rgba(245, 236, 236, 0.1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+::ng-deep .p-tabmenu .p-menuitem-link {
+    background-color: transparent !important;  /* Elimina el fondo blanco */
+    border: none !important;                   /* Elimina cualquier borde */
+}
+
+
+
+
+/* Transición para el hover y deselección */
+::ng-deep .p-tabmenu .p-tabmenuitem {
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+/* Hover: aumenta el tamaño */
+::ng-deep .p-tabmenu .p-tabmenuitem:hover {
+    transform: scale(1.1); /* Aumenta el tamaño */
+}
+
+/* Deselección: regresa al tamaño original */
+::ng-deep .p-tabmenu .p-tabmenuitem:not(:hover) {
+    transform: scale(1); /* Regresa a su tamaño original */
+}
+
+
+.theme-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+  
+  .theme-buttons button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .theme-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .dropdown-container {
+    position: absolute;
+    top: 10px; /* Ajusta según la distancia deseada */
+    right: 10px;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+  }
+  
+
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca las partículas detrás del contenido principal */
+  }
+  
+  .footer {
+    background-color: transparent; /* Fondo oscuro para resaltar */
+    color: #fff; /* Texto en blanco */
+    text-align: center; /* Centrado de texto */
+    padding: 10px 0; /* Espaciado superior e inferior */
+    position: relative; /* Opción para que no se fije */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.footer p {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin: 0; /* Sin márgenes */
+}
+
+
+/* Footer al final de la página, no de la pantalla */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+margin-top: auto;
+}
+
+
+  
+  

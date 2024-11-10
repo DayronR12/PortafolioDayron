@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+
+.card {
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+       /* Asegura que ocupe todo el alto de la pantalla (si es necesario) */
+  
+}
+
+.card-dark{
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+       /* Asegura que ocupe todo el alto de la pantalla (si es necesario) */
+}
+
+/* Estilo para el botón de llamada a la acción */
+.cta-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #24232377;
+    color: #a39e9e;
+    border: 2px solid rgb(105, 105, 105);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #8dd0ff;
+    border-color: #8dd0ff;
+    transform: scale(1.03);
+    color: black;
+  }
