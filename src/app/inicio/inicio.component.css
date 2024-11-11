@@ -109,4 +109,74 @@ body.dark-mode .card-inicio p {
   color: #ddd;  /* Texto más claro en modo oscuro */
 }
 
-/* Estilo para el footer */
+/* Ajustes para pantallas pequeñas (Responsive) */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 28px; /* Reduce el tamaño del título */
+  }
+
+  .intro p {
+    font-size: 16px; /* Reduce el tamaño del párrafo */
+  }
+
+  .about-me h2 {
+    font-size: 24px; /* Reduce el tamaño del subtítulo "Sobre mí" */
+  }
+
+  .about-me p {
+    font-size: 16px; /* Reduce el tamaño del texto "Sobre mí" */
+  }
+
+  .card-inicio {
+    width: 90%;  /* Ajusta el card al 90% del contenedor padre */
+    padding: 15px;  /* Reduce el espaciado interno */
+  }
+
+  .card-inicio h1, .card-inicio h2 {
+    font-size: 22px;  /* Reduce el tamaño de los títulos en el card */
+  }
+
+  .card-inicio p {
+    font-size: 14px;  /* Reduce el tamaño del texto en el card */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (por ejemplo, móviles) */
+@media (max-width: 480px) {
+  .card-inicio {
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;  /* Centra horizontalmente */
+    display: block;  /* Asegura que el elemento se trate como bloque */
+  }
+  
+  .intro h1 {
+    font-size: 24px; /* Aún más pequeño en pantallas pequeñas */
+  }
+
+  .intro p {
+    font-size: 14px; /* Ajusta el tamaño del párrafo */
+  }
+
+  .about-me h2 {
+    font-size: 20px; /* Aún más pequeño para pantallas pequeñas */
+  }
+
+  .about-me p {
+    font-size: 14px; /* Ajusta el tamaño del texto "Sobre mí" */
+  }
+
+  .card-inicio {
+    width: 100%;  /* El card ocupa todo el ancho en pantallas muy pequeñas */
+    padding: 10px;  /* Menos espacio interno */
+  }
+
+  .card-inicio h1, .card-inicio h2 {
+    font-size: 18px;  /* Ajusta el tamaño de los títulos en el card */
+  }
+
+  .card-inicio p {
+    font-size: 12px;  /* Ajusta el tamaño del texto en el card */
+  }
+}
+

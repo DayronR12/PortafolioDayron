@@ -1,1 +1,80 @@
-<p>habilidades works!</p>
+<div class="card-habilidades">
+    <div class="circle-container">
+        <!-- Círculo más grande -->
+        <div class="orbit big-orbit" [ngStyle]="{ 'width': bigRadius + 'px', 'height': bigRadius + 'px' }">
+            <!-- Círculo más pequeño dentro del grande -->
+            <div class="orbit small-orbit" [ngStyle]="{ 'width': smallRadius + 'px', 'height': smallRadius + 'px' }">
+                <!-- Imagen que rota sobre el borde del círculo -->
+                <div class="rotating-wrapper">
+                    <img class="rotating-image" src="assets/images/icons8-angular-48.png" alt="Imagen 1">
+                </div>
+                <div class="rotating-wrapperr">
+                    <img class="static-image" src="assets/images/icons8-reaccionar-80.png" alt="Imagen 2">
+                </div>
+                <div class="rotating-wrapper-big">
+                    <img class="rotating-image-big" src="assets/images/icons8-logotipo-de-primavera-48.png" alt="Imagen 3">
+                </div>
+                <div class="rotating-wrapper-bigg">
+                    <img class="rotating-image-bigg" src="assets/images/icons8-javascript-48.png" alt="Imagen 4">
+                </div>
+            </div>
+            <div class="circle-text">Habilidades</div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card-habilidadess" data-aos="fade-up">
+    <h2>Generales:</h2>
+    
+    <div class="container">
+      <!-- Frontend -->
+      <div class="category" data-aos="fade-right">
+        <h3>Frontend</h3>
+        <ul>
+            <li><img src="assets/images/icons8-angular-48.png" alt="Angular Logo"> Angular</li>
+            <li><img src="assets/images/icons8-reaccionar-80.png" alt="React Logo"> React</li>
+            <li><img src="assets/images/icons8-javascript-48.png" alt="JavaScript Logo"> Javascript</li>
+            <li><img src="assets/images/icons8-html-48.png" alt="HTML Logo"> HTML</li>
+            <li><img src="assets/images/icons8-css-50 (1).png" alt="CSS Logo"> CSS</li>
+            <li><img src="assets/images/icons8-typescript-24.png" alt="TypeScript Logo"> TypeScript</li>
+            <li><img src="assets/images/icons8-oreja-48.png" alt="Bootstrap Logo"> Bootstrap</li>
+        </ul>
+      </div>
+  
+      <!-- Backend -->
+      <div class="category" data-aos="fade-left">
+        <h3>Backend</h3>
+        <ul>
+          <li><img src="assets/images/icons8-nodo-js-48.png" alt="Node.js Logo"> Node.js</li>
+          <li><img src="assets/images/icons8-logotipo-de-primavera-48.png" alt="Spring Boot Logo"> Spring Boot</li>
+          <li><img src="assets/images/icons8-maven-ios-50.png" alt="Maven Logo"> Maven</li>
+          <li><img src="assets/images/icons8-intellij-idea-48.png" alt="Intellij IDEA Logo"> IntelliJ IDEA</li>
+        </ul>
+      </div>
+  
+      <!-- Base de Datos -->
+      <div class="category" data-aos="fade-right">
+        <h3>Bases de Datos</h3>
+        <ul>
+          <li><img src="assets/images/icons8-mysql-48.png" alt="MySQL Logo"> MySQL</li>
+          <li><img src="assets/images/icons8-mongo-db-48.png" alt="MongoDB Logo"> MongoDB</li>
+          <li><img src="assets/images/icons8-postgre-sql-a-free-and-open-source-relational-database-management-system-24.png" alt="PostgreSQL Logo"> PostgreSQL</li>
+        </ul>
+      </div>
+  
+      <!-- Otros -->
+      <div class="category" data-aos="fade-left">
+        <h3>Otros</h3>
+        <ul>
+          <li><img src="assets/images/icons8-git-48.png" alt="Git Logo"> Git</li>
+          <li><img src="assets/images/icons8-existir-48.png" alt="JIRA Logo"> JIRA</li>
+          <li><img src="assets/images/apache.png" alt="Apache Logo"> Apache</li>
+          <li><img src="assets/images/icons8-redux-externo-una-biblioteca-javascript-de-código-abierto-para-administrar-el-logotipo-de-estado-de-aplicaciones-color-tal-revivo-24.png" alt="REDUX Logo"> REDUX</li>
+          <li><img src="assets\images\xamp.png" alt="XAMPP Logo"> XAMPP</li>
+          <li><img src="assets/images/post.png" alt="Postman Logo"> Postman</li>
+        </ul>
+      </div>
+    </div>
+  </div>

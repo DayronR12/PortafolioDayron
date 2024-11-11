@@ -1,0 +1,340 @@
+.h3titulo{
+    z-index: -1;
+}
+.card-habilidades{
+    background-color: rgba(68, 68, 68, 0.1);  /* Fondo blanco semi-transparente */
+    border-radius: 10px;  /* Bordes redondeados */
+    padding: 20px;  /* Espaciado interno */
+    box-shadow: 0 4px 12px rgba(105, 105, 105, 0.233);  /* Sombra suave */
+    backdrop-filter: blur(5px);  /* Desenfoque del fondo */
+    transition: background-color 0.3s ease;  /* Transición suave de fondo */
+    margin-top: 10px;
+    width: 400px;  /* Ancho del card al 80% del contenedor padre */
+    max-width: 500px;
+    height: 350px;
+    max-height: 450px;
+    margin-left: auto;  /* Centrado horizontal */
+    margin-right: auto;  /* Centrado horizontal */
+}
+
+.circle-container {
+    position: absolute; /* Para asegurarnos de que se quede dentro del card */
+    top: 50%; /* Centrado verticalmente dentro del card */
+    left: 50%; /* Centrado horizontalmente dentro del card */
+    transform: translate(-50%, -50%); /* Ajustamos para que el centro del contenedor coincida */
+    width: 100%; /* Ajustamos al tamaño del card */
+    height: 100%; /* Ajustamos al tamaño del card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Estilo para el círculo grande */
+  .orbit.big-orbit {
+    position: relative;
+    border-radius: 50%;
+    border: 2.5px solid #202020; /* Color del borde del círculo grande */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  /* Estilo para el círculo pequeño */
+  .orbit.small-orbit {
+    position: absolute; /* Se posiciona dentro del círculo grande */
+    border-radius: 50%;
+    border: 2.5px solid #202020; /* Color del borde del círculo pequeño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center; /* Centro de la órbita para la animación */
+    top: 50%; /* Posicionamos el centro del círculo pequeño en el centro del círculo grande */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Para que se alinee correctamente en el centro */
+  }
+  
+  /* Estilo para la envoltura de la imagen que la hará girar */
+  .rotating-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 100%; /* Establece el borde del círculo pequeño como origen de la rotación */
+    animation: rotateAroundCircle 10s linear infinite; /* Animación para que gire alrededor del círculo */
+  }
+
+  .rotating-wrapperr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 0%; /* Establece el borde del círculo pequeño como origen de la rotación */
+    animation: rotateAroundCirclee 10s linear infinite; /* Animación para que gire alrededor del círculo */
+  }
+
+  .rotating-wrapper-big {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -125px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 180%; /* Establece el borde del círculo pequeño como origen de la rotación */
+    animation: rotateAroundCirclebig 10s linear infinite; /* Animación para que gire alrededor del círculo */
+  }
+
+  .rotating-wrapper-bigg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 125px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% -80%; /* Establece el borde del círculo pequeño como origen de la rotación */
+    animation: rotateAroundCirclebigg 10s linear infinite; /* Animación para que gire alrededor del círculo */
+  }
+
+  /* Estilo para la imagen estática dentro del círculo pequeño */
+.static-image {
+    width: 30%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    object-fit: contain;
+    transform: rotate(0deg); /* La imagen no rota sobre sí misma */
+    animation: rotateImagere 10s linear infinite reverse; /* Rotación en sentido contrario */
+  }
+  /* Ajustamos la imagen que rota */
+.rotating-image-big {
+    width: 40px;  /* Tamaño de la imagen */
+    height: auto;
+    object-fit: contain;
+    transform: rotate(0deg);
+    animation: rotateimagebig 10s linear infinite;
+  }
+  .rotating-image-bigg {
+    width: 40px;  /* Tamaño de la imagen */
+    height: auto;
+    object-fit: contain;
+    transform: rotate(0deg);
+    animation: rotateimagebig 10s linear infinite;
+  }
+
+  /* Estilo para la imagen */
+  .rotating-image {
+    width: 30%; /* Ajustamos el tamaño de la imagen */
+    height: auto;
+    object-fit: contain; /* Hace que la imagen se ajuste sin perder proporción */
+    transform: rotate(0deg); /* La imagen no rota sobre sí misma */
+    animation: rotateImage 10s linear infinite reverse; /* Rotación en sentido contrario */
+  }
+  .circle-text {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bold;
+
+    color: transparent; /* Hacemos el texto transparente para aplicar el gradiente */
+    background: linear-gradient(to bottom, rgba(145, 145, 145, 0.9), rgba(0, 0, 0, 0.2)); /* Efecto desvanecido */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-background-clip: text; /* Compatibilidad con navegadores basados en WebKit */
+    text-align: center;
+    z-index: -1; /* Asegura que el texto esté debajo de los círculos */
+}
+
+  
+.habilidad img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .habilidad:hover img {
+    transform: scale(1.1); /* Hace que la imagen aumente un poco cuando se pasa el ratón por encima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra cuando se pasa el ratón */
+  }
+  
+
+
+
+  /* Animación de rotación alrededor del círculo pequeño */
+  @keyframes rotateAroundCircle {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(360deg); /* Rota completamente alrededor del círculo */
+    }
+  }
+
+  @keyframes rotateAroundCirclee {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(360deg); /* Rota completamente alrededor del círculo */
+    }
+  }
+
+  @keyframes rotateAroundCirclebig {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(-360deg); /* Rota completamente alrededor del círculo */
+    }
+  }
+  @keyframes rotateAroundCirclebigg {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(-360deg); /* Rota completamente alrededor del círculo */
+    }
+  }
+  
+  /* Animación para rotar la imagen en sentido contrario */
+  @keyframes rotateImage {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(356deg); /* Rota 360 grados en sentido contrario */
+    }
+  }
+
+  @keyframes rotateimagebig {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(360deg); /* Rota 360 grados en sentido contrario */
+    }
+  }
+
+  @keyframes rotateImagere {
+    0% {
+      transform: rotate(0deg); /* Inicia desde la posición inicial */
+    }
+    100% {
+      transform: rotate(356deg); /* Rota 360 grados en sentido contrario */
+    }
+}
+
+
+.card-habilidadess {
+    padding: 15px;  /* Reduce el espacio interno */
+    text-align: center;
+    background-color: rgba(68, 68, 68, 0.1); 
+    box-shadow: 0 4px 12px rgba(105, 105, 105, 0.233);  /* Sombra suave */
+    backdrop-filter: blur(5px);  /* Desenfoque del fondo */
+    border-radius: 10px;
+    position: relative;
+    top: 25px;
+    width: 650px;  /* Ancho específico del card */
+    max-width: 90%; /* Máximo ancho en relación al contenedor */
+    margin: 10px auto; /* Centra el card en la página y agrega espacio en los márgenes */
+}
+
+  
+  .card-habilidadess h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #4e4e4e;
+  }
+
+  .card-habilidadess ul {
+    padding-left: 20px; /* Espaciado a la izquierda para la lista */
+    list-style-type: none; /* Elimina los puntos predeterminados de la lista */
+    text-align: left; /* Alinea el contenido de la lista a la izquierda */
+}
+
+.card-habilidadess li {
+    margin-bottom: 10px; /* Agrega un margen inferior entre los elementos */
+}
+
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .category {
+    flex: 1 1 45%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #3130302c;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(59, 59, 59, 0.1);
+  }
+  
+  .category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #727272;
+    text-align: left;
+  }
+  .card-habilidadess li img {
+    position: relative;
+    top: 5px;
+    width: 24px; /* Tamaño del logo */
+    height: 24px;
+    margin-right: 5px; /* Espacio entre el logo y el nombre de la tecnología */
+    object-fit: contain;
+}
+  .category ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category ul li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: rgba(197, 197, 197, 0.466);
+  }
+  
+  .category ul li::before {
+    content: "• ";
+    color: #757474ad;
+    font-weight: bold;
+  }
+  
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  [data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  [data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  [data-aos="fade-right"] {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  
+  [data-aos="fade-right"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
