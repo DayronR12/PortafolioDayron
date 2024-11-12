@@ -26,55 +26,52 @@
 
 
 <div class="card-habilidadess" data-aos="fade-up">
-    <h2>Generales:</h2>
-    
-    <div class="container">
-      <!-- Frontend -->
-      <div class="category" data-aos="fade-right">
-        <h3>Frontend</h3>
-        <ul>
-            <li><img src="assets/images/icons8-angular-48.png" alt="Angular Logo"> Angular</li>
-            <li><img src="assets/images/icons8-reaccionar-80.png" alt="React Logo"> React</li>
-            <li><img src="assets/images/icons8-javascript-48.png" alt="JavaScript Logo"> Javascript</li>
-            <li><img src="assets/images/icons8-html-48.png" alt="HTML Logo"> HTML</li>
-            <li><img src="assets/images/icons8-css-50 (1).png" alt="CSS Logo"> CSS</li>
-            <li><img src="assets/images/icons8-typescript-24.png" alt="TypeScript Logo"> TypeScript</li>
-            <li><img src="assets/images/icons8-oreja-48.png" alt="Bootstrap Logo"> Bootstrap</li>
-        </ul>
-      </div>
-  
-      <!-- Backend -->
-      <div class="category" data-aos="fade-left">
-        <h3>Backend</h3>
-        <ul>
-          <li><img src="assets/images/icons8-nodo-js-48.png" alt="Node.js Logo"> Node.js</li>
-          <li><img src="assets/images/icons8-logotipo-de-primavera-48.png" alt="Spring Boot Logo"> Spring Boot</li>
-          <li><img src="assets/images/icons8-maven-ios-50.png" alt="Maven Logo"> Maven</li>
-          <li><img src="assets/images/icons8-intellij-idea-48.png" alt="Intellij IDEA Logo"> IntelliJ IDEA</li>
-        </ul>
-      </div>
-  
-      <!-- Base de Datos -->
-      <div class="category" data-aos="fade-right">
-        <h3>Bases de Datos</h3>
-        <ul>
-          <li><img src="assets/images/icons8-mysql-48.png" alt="MySQL Logo"> MySQL</li>
-          <li><img src="assets/images/icons8-mongo-db-48.png" alt="MongoDB Logo"> MongoDB</li>
-          <li><img src="assets/images/postt.png" alt="PostgreSQL Logo"> PostgreSQL</li>
-        </ul>
-      </div>
-  
-      <!-- Otros -->
-      <div class="category" data-aos="fade-left">
-        <h3>Otros</h3>
-        <ul>
-          <li><img src="assets/images/icons8-git-48.png" alt="Git Logo"> Git</li>
-          <li><img src="assets/images/icons8-existir-48.png" alt="JIRA Logo"> JIRA</li>
-          <li><img src="assets/images/apache.png" alt="Apache Logo"> Apache</li>
-          <li><img src="assets/images/redux-reducer.png" alt="REDUX Logo"> REDUX</li>
-          <li><img src="assets\images\xamp.png" alt="XAMPP Logo"> XAMPP</li>
-          <li><img src="assets/images/post.png" alt="Postman Logo"> Postman</li>
-        </ul>
-      </div>
+  <h2>Generales:</h2>
+
+  <div class="container">
+    <!-- Frontend -->
+    <div class="category" data-aos="fade-right">
+      <h3>Frontend</h3>
+      <ul>
+        <li *ngFor="let skill of frontend">
+          <img [src]="skill.icono" [alt]="skill.nombre + ' Logo'"> {{ skill.nombre }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Backend -->
+    <div class="category" data-aos="fade-left">
+      <h3>Backend</h3>
+      <ul>
+        <li *ngFor="let skill of backend">
+          <img [src]="skill.icono" [alt]="skill.nombre + ' Logo'"> {{ skill.nombre }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Bases de Datos -->
+    <div class="category" data-aos="fade-right">
+      <h3>Bases de Datos</h3>
+      <ul>
+        <li *ngFor="let skill of databases">
+          <img [src]="skill.icono" [alt]="skill.nombre + ' Logo'"> {{ skill.nombre }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Otros -->
+    <div class="category" data-aos="fade-left">
+      <h3>Otros</h3>
+      <ul>
+        <li *ngFor="let skill of otros">
+          <img [src]="skill.icono" [alt]="skill.nombre + ' Logo'"> {{ skill.nombre }}
+        </li>
+      </ul>
     </div>
   </div>
+</div>
+  <footer>
+    <button class="scroll-to-top" (click)="scrollToTop()">
+      &#8593; <!-- Flecha hacia arriba -->
+    </button>
+  </footer>

@@ -253,11 +253,6 @@
     text-align: left; /* Alinea el contenido de la lista a la izquierda */
 }
 
-.card-habilidadess li {
-    margin-bottom: 10px; /* Agrega un margen inferior entre los elementos */
-}
-
-  
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -304,23 +299,44 @@
     font-weight: bold;
   }
   
-  [data-aos="fade-left"] {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  
-  [data-aos="fade-left"].aos-animate {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  
+  [data-aos="fade-left"],
   [data-aos="fade-right"] {
-    opacity: 0;
-    transform: translateX(50px);
+      opacity: 0; /* Visibilidad inicial oculta */
+      transition: opacity 0.8s ease, transform 0.8s ease;
   }
-  
-  [data-aos="fade-right"].aos-animate {
+
+  [data-aos="fade-left"].aos-animate,
+[data-aos="fade-right"].aos-animate {
     opacity: 1;
     transform: translateX(0);
-  }
+}
+  
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4e4e4e09;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(92, 91, 91, 0.185);
+  transition: background-color 0.1s ease, color 0.3s ease;
+  z-index: 9999; 
+}
+
+.scroll-to-top:hover {
+  background-color: #8dd0ff;
+  color: #202020;
+}
+
+.scroll-to-top:focus {
+  outline: none;
+}
   
