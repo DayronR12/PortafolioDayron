@@ -2,6 +2,9 @@
 .intro, .about-me {
   text-align: center;
 }
+.name {
+  color: #8dd0ff; /* Azul */
+}
 
 /* Animación para el título "Bienvenido!" */
 .intro h1 {
@@ -119,16 +122,10 @@ body.dark-mode .card-inicio p {
     font-size: 16px; /* Reduce el tamaño del párrafo */
   }
 
-  .about-me h2 {
-    font-size: 24px; /* Reduce el tamaño del subtítulo "Sobre mí" */
-  }
-
-  .about-me p {
-    font-size: 16px; /* Reduce el tamaño del texto "Sobre mí" */
-  }
-
   .card-inicio {
-    width: 90%;  /* Ajusta el card al 90% del contenedor padre */
+    position: relative;
+    top: 20px;
+    width: 500px;  /* Ajusta el card al 90% del contenedor padre */
     padding: 15px;  /* Reduce el espaciado interno */
   }
 
@@ -136,9 +133,6 @@ body.dark-mode .card-inicio p {
     font-size: 22px;  /* Reduce el tamaño de los títulos en el card */
   }
 
-  .card-inicio p {
-    font-size: 14px;  /* Reduce el tamaño del texto en el card */
-  }
 }
 
 /* Ajustes para pantallas muy pequeñas (por ejemplo, móviles) */

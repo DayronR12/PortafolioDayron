@@ -1,12 +1,21 @@
 <div id="particles-js"></div>
 
-  <div class="card">
-      <p-tabMenu [model]="items"></p-tabMenu>
-  </div>
+<div class="card">
+  <!-- Botón hamburguesa (se muestra solo en pantallas pequeñas) -->
+  <button class="hamburger" (click)="toggleMenu()" *ngIf="!isLargeScreen">&#9776;</button>
+
+  <!-- Menú hamburguesa desplegable (solo se muestra después de hacer clic en el botón) -->
+  <ul *ngIf="showHamburgerMenu && !isLargeScreen" class="hamburger-menu">
+    <li *ngFor="let item of items" (click)="navigateTo(item.routerLink)">
+      {{ item.label }}
+    </li>
+  </ul>
+
+  <!-- Menú de pestañas (solo se muestra en pantallas grandes) -->
+  <p-tabMenu *ngIf="isLargeScreen" [model]="items"></p-tabMenu>
+</div>
 
 <router-outlet></router-outlet>
 <footer class="footer">
   <p>&copy; 2024 Dayron Restrepo Perez. Todos los derechos reservados.</p>
 </footer>
-
-

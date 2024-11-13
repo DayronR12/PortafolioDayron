@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { TimelineModule } from 'primeng/timeline';
 
 
 
@@ -40,6 +41,7 @@ import { ButtonModule } from 'primeng/button';
     ToggleButtonModule,
     CardModule,
     ButtonModule,
+    TimelineModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
