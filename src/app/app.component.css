@@ -59,8 +59,8 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    width: 40px; /* Ancho del círculo */
-    height: 40px; /* Alto del círculo */
+    width: 50px; /* Ancho del círculo */
+    height: 50px; /* Alto del círculo */
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
