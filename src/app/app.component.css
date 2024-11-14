@@ -99,7 +99,7 @@
   /* Media queries para pantallas pequeñas */
   @media (max-width: 768px) {
     .hamburger {
-      display: block; /* Muestra el botón hamburguesa */
+      display: flex; /* Muestra el botón hamburguesa */
     }
   
     .card p-tabMenu {
