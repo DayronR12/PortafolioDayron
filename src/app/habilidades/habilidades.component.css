@@ -12,6 +12,7 @@
     max-height: 450px;
     margin-left: auto;  /* Centrado horizontal */
     margin-right: auto;  /* Centrado horizontal */
+    position: relative; /* Necesario para el posicionamiento absoluto de los círculos */
 }
 
 .circle-container {
@@ -159,7 +160,14 @@
   }
   
 
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
 
+  .circle-container {
+
+    transform: translate(-50%, -60%); /* Ajustamos el centrado vertical */
+  }
+}
 
   /* Animación de rotación alrededor del círculo pequeño */
   @keyframes rotateAroundCircle {
@@ -223,6 +231,7 @@
     100% {
       transform: rotate(356deg); /* Rota 360 grados en sentido contrario */
     }
+
 }
 
 
