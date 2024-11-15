@@ -1,0 +1,111 @@
+.contacto {
+    margin-top: 10px;
+    background-color: rgba(68, 68, 68, 0.1);  /* Fondo blanco semi-transparente */
+    border-radius: 10px;  /* Bordes redondeados */
+    padding: 20px;  /* Espaciado interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    backdrop-filter: blur(5px);  /* Desenfoque del fondo */
+    width: 80%;  /* Ancho del card al 80% del contenedor padre */
+    max-width: 800px;  /* Ancho máximo del card para pantallas grandes */
+    margin-left: auto;  /* Centrado horizontal */
+    margin-right: auto;  /* Centrado horizontal */
+  }
+
+  .contacto h2{
+    color: #333;
+  }
+  
+  .redes-sociales {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .redes-sociales h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4e4e4e;
+  }
+  
+  .icons a {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .icons a:hover {
+    color: #8dd0ff; /* Cambia según el color de tu marca */
+  }
+  
+  .descargar-cv {
+    margin-top: 10px;
+    text-align: center;
+
+  }
+
+  .descargar-cv h2{
+    color: #4e4e4e;
+  }
+  
+  .certificados h2{
+    text-align: center;
+    color: #4e4e4e;
+  }
+
+  .certificados{
+    margin-top: 50px;
+  }
+
+  .certificados-lista {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+  }
+  
+  .certificado {
+    display: flex; /* Para alinear imagen y texto en línea */
+    flex-direction: row; /* Imagen a la izquierda, texto a la derecha */
+    background-color: #2e2d2d52;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ancho fijo para las cards */
+    align-items: center; /* Alinear elementos verticalmente */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .certificado:hover {
+    box-shadow: 0 6px 12px rgba(34, 34, 34, 0.2);
+    transform: translateY(-5px); /* Hace que la card se mueva hacia arriba */
+
+  }
+  
+  .certificado img {
+    width: 50px; /* Tamaño reducido de la imagen */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /* Para asegurarse de que la imagen mantenga su proporción */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .certificado p {
+    font-size: 14px;
+    color: #727272;
+    margin: 0;
+  }
+  
+  .certificado a {
+    display: block;
+    margin-top: 10px;
+    color: #8dd0ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .certificado a:hover {
+    text-decoration: underline;
+  }
+  
+  
