@@ -15,4 +15,7 @@ export class ProyectosComponent {
   goToGitHubCRUD() {
     window.open('https://github.com/DayronR12/Pruebas-Pagina-', '_blank');
   }
+  goToGitHubCRUDVET(){
+    window.open('https://github.com/DayronR12/VeterinariaXYZ', '_blank');
+  }
 }
